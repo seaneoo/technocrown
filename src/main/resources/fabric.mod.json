@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "technocrown",
+  "version": "${version}",
+  "name": "Techno Crown",
+  "description": "This is an example description! Tell everyone what your mod is about!",
+  "authors": [
+    "Sean O'Connor"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": "",
+    "issues": ""
+  },
+  "license": "Unlicense",
+  "icon": "assets/technocrown/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.seano.technocrown.TechnoCrownMod"
+    ]
+  },
+  "depends": {
+    "java": ">=17",
+    "minecraft": "~1.19",
+    "fabricloader": ">=0.14.6",
+    "fabric": ">=0.55.1+1.19"
+  }
+}
