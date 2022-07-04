@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
+    "facing=north": {
       "model": "technocrown:block/crown"
+    },
+    "facing=east": {
+      "model": "technocrown:block/crown",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "technocrown:block/crown",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "technocrown:block/crown",
+      "y": 270
     }
   }
 }
