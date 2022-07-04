@@ -20,6 +20,9 @@
       "dev.seano.technocrown.TechnoCrownMod"
     ]
   },
+  "mixins": [
+    "technocrown.mixins.json"
+  ],
   "depends": {
     "java": ">=17",
     "minecraft": "~1.19",
