@@ -8,9 +8,9 @@
     "Sean O'Connor"
   ],
   "contact": {
-    "homepage": "",
-    "sources": "",
-    "issues": ""
+    "homepage": "https://modrinth.com/mod/technocrown/",
+    "sources": "https://github.com/seaneoo/technocrown",
+    "issues": "https://github.com/seaneoo/technocrown/issues"
   },
   "license": "Unlicense",
   "icon": "assets/technocrown/icon.png",
