@@ -1,5 +1,6 @@
 package dev.seano.technocrown;
 
+import dev.seano.technocrown.block.TechnoBlocks;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 
@@ -13,6 +14,6 @@ public class TechnoCrownMod implements ModInitializer {
 
     @Override
     public void onInitialize() {
-
+        TechnoBlocks.register();
     }
 }
