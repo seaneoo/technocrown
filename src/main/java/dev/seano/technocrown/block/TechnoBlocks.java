@@ -6,13 +6,15 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.registry.Registry;
 
 import static dev.seano.technocrown.TechnoCrownMod.identifier;
 
 public class TechnoBlocks {
 
-    public static final Block CROWN = new CrownBlock(FabricBlockSettings.of(Material.METAL)
+    public static final Block CROWN = new CrownBlock(FabricBlockSettings.of(Material.AMETHYST)
+            .sounds(BlockSoundGroup.AMETHYST_BLOCK)
             .nonOpaque()
             .strength(0.5f));
 
