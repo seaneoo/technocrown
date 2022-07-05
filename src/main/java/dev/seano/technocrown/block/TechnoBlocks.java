@@ -16,6 +16,7 @@ public class TechnoBlocks {
     public static final Block CROWN = new CrownBlock(FabricBlockSettings.of(Material.AMETHYST)
             .sounds(BlockSoundGroup.AMETHYST_BLOCK)
             .nonOpaque()
+            .luminance(state -> 3)
             .strength(0.5f));
 
     @SuppressWarnings("SameParameterValue")
