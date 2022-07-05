@@ -24,3 +24,5 @@ need.
 ![](doc/screenshot1.png)
 
 ![](doc/screenshot2.png)
+
+![](doc/recipe.png)
