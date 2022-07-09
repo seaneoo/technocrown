@@ -23,17 +23,15 @@ public abstract class PigEntityMixin extends AnimalEntity implements ItemSteerab
 
     @Override
     public ActionResult interactMob(PlayerEntity player, Hand hand) {
-        if (this.getEquippedStack(EquipmentSlot.HEAD)
-                .isOf(TechnoBlocks.CROWN.asItem())) {
-            this.equipStack(EquipmentSlot.HEAD, null);
-            player.giveItemStack(new ItemStack(TechnoBlocks.CROWN.asItem()));
-        } else {
+        ItemStack head = this.getEquippedStack(EquipmentSlot.HEAD);
+        if (head.isEmpty()) {
             ItemStack itemStack = player.getStackInHand(hand);
-            if (itemStack.isOf(TechnoBlocks.CROWN.asItem()) && this.getEquippedStack(EquipmentSlot.HEAD)
-                    .isEmpty()) {
-                if (!player.getAbilities().creativeMode) itemStack.decrement(1);
+            if (itemStack.isOf(TechnoBlocks.CROWN.asItem())) {
                 this.equipStack(EquipmentSlot.HEAD, new ItemStack(TechnoBlocks.CROWN.asItem()));
+                if (!player.getAbilities().creativeMode) itemStack.decrement(1);
             }
+        } else {
+            // TODO: remove crown
         }
         return super.interactMob(player, hand);
     }
