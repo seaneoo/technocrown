@@ -39,12 +39,11 @@ public class CrownFeatureRenderer<T extends LivingEntity, M extends EntityModel<
                 .isOf(TechnoBlocks.CROWN.asItem())) {
             this.renderCrown(matrices, vertexConsumers, light, entity, limbAngle, limbDistance, animationProgress,
                     headYaw, headPitch);
-        } else //noinspection ConstantConditions
-            if (entity instanceof PigEntity && (entity.hasCustomName() && "Technoblade".equals(entity.getCustomName()
-                    .getString()))) {
-                this.renderCrown(matrices, vertexConsumers, light, entity, limbAngle, limbDistance, animationProgress
-                        , headYaw, headPitch);
-            }
+        } else if (entity instanceof PigEntity && entity.getEquippedStack(EquipmentSlot.HEAD)
+                .isOf(TechnoBlocks.CROWN.asItem())) {
+            this.renderCrown(matrices, vertexConsumers, light, entity, limbAngle, limbDistance, animationProgress,
+                    headYaw, headPitch);
+        }
     }
 
     private void renderCrown(MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, T entity,
