@@ -10,6 +10,7 @@
     "LivingEntityMixin"
   ],
   "client": [
+    "HeadFeatureRendererMixin",
     "PigEntityRendererMixin",
     "PlayerEntityRendererMixin"
   ]
