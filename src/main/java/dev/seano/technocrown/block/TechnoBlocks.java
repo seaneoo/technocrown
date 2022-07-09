@@ -7,6 +7,7 @@ import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 
 import static dev.seano.technocrown.TechnoCrownMod.identifier;
@@ -23,7 +24,8 @@ public class TechnoBlocks {
     private static void registerBlock(Block block, String id) {
         Registry.register(Registry.BLOCK, identifier(id), block);
         Registry.register(Registry.ITEM, identifier(id), new BlockItem(block,
-                new FabricItemSettings().group(ItemGroup.MISC)));
+                new FabricItemSettings().group(ItemGroup.MISC)
+                .rarity(Rarity.EPIC)));
     }
 
     public static void register() {
