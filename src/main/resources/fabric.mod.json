@@ -18,6 +18,9 @@
   "entrypoints": {
     "main": [
       "dev.seano.technocrown.TechnoCrownMod"
+    ],
+    "client": [
+      "dev.seano.technocrown.client.TechnoCrownClientMod"
     ]
   },
   "mixins": [

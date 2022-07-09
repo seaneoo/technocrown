@@ -8,5 +8,9 @@
   },
   "mixins": [
     "LivingEntityMixin"
+  ],
+  "client": [
+    "PigEntityRendererMixin",
+    "PlayerEntityRendererMixin"
   ]
 }
