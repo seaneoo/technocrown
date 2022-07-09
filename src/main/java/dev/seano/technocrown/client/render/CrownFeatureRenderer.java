@@ -1,5 +1,6 @@
 package dev.seano.technocrown.client.render;
 
+import dev.seano.technocrown.block.TechnoBlocks;
 import dev.seano.technocrown.client.model.CrownFeatureModel;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -12,12 +13,10 @@ import net.minecraft.client.render.entity.feature.FeatureRendererContext;
 import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.client.render.entity.model.EntityModelLoader;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.passive.PigEntity;
-import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
-
-import java.util.Objects;
 
 import static dev.seano.technocrown.TechnoCrownMod.identifier;
 import static dev.seano.technocrown.client.TechnoCrownClientMod.MODEL_LAYER_CROWN;
@@ -36,7 +35,8 @@ public class CrownFeatureRenderer<T extends LivingEntity, M extends EntityModel<
     public void render(MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, T entity,
                        float limbAngle, float limbDistance, float tickDelta, float animationProgress, float headYaw,
                        float headPitch) {
-        if (entity instanceof AbstractClientPlayerEntity) {
+        if (entity instanceof AbstractClientPlayerEntity && entity.getEquippedStack(EquipmentSlot.HEAD)
+                .isOf(TechnoBlocks.CROWN.asItem())) {
             this.renderCrown(matrices, vertexConsumers, light, entity, limbAngle, limbDistance, animationProgress,
                     headYaw, headPitch);
         } else //noinspection ConstantConditions
